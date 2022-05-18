@@ -1,0 +1,298 @@
+/*          Programación Web
+        Proyecto HTML, CSS y JS     
+    López Carranza - Medina Sifuentes 
+              (Grupo 14)             
+*/
+
+* {
+    box-sizing: border-box;     /*ESTA ES LA MEJOR INSTRUCCIÓN QUE TIENE CSS!!!!!!*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ff9191;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%23151515' fill-opacity='0.4' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+/* Navegación */
+.nav-principal{
+    font-size: 26px;
+    display: flex;      /*Esto hace que se pongan los objetos de adentro, uno al lado del otro. */
+    justify-content: space-between;     /*Esto hace que todos los elementos ocupen el ancho disponible. */
+    align-items: center;
+    height: 90px;
+    padding: 20px 0;
+}
+.nav-logo{
+    width: 50px;
+}
+
+/* Navegacion izquierda */
+.nav-principal ul{
+    display: flex;
+}
+.nav-principal ul li{
+    padding: 10px;
+}
+.nav-principal ul li a{
+    padding: 5px;
+    font-size: 20px;
+}
+.nav-principal ul li a:hover{  /*Cuando el mouse esta sobre los 'a' */
+    border-bottom: 2px solid #FFFFFF;
+}
+.nav-principal ul.nav-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+.menu-boton{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    font-size: 24px;
+    display: none;
+    border: #2F3640 2px;
+
+}
+
+/* Showcase disque*/
+hr{
+    margin: 10px, 0;
+}
+.showcase{
+    width: 100%;
+    background: url("./img/portada1.jpg") no-repeat center center/cover;
+    padding:  50px;
+    margin-bottom: 25px;
+    display: flex;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.boton {
+    cursor: pointer;        /*Esto hace que el mouse cambie cuando pasa por enncima de los links. */
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: white;
+    color: #ff9191;
+    font-size: 18px;
+    border: 1px solid #FFFFFF;
+    margin: 10px 0;
+}
+.boton:hover{
+    opacity: 0.8;
+}
+
+.titulo{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.titulo h2 {
+    font-family: 'Rubik Puddles', cursive;
+    font-size: 50px;
+    display: block;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    color: #ff9191;
+}
+.titulo p{
+    font-family: 'Secular One', sans-serif;
+    color: white;
+    font-size: 16px;
+}
+.titulo h2,       /**/
+.titulo p{        /**/
+    margin-bottom: 10px;    
+}
+.fa-user-pen{
+    color: white;
+}
+
+
+/* News cards */
+.news-cartas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 10px, 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.news-cartas div{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.news-cartas img{
+    width: 100%;
+    height: 180px;
+}
+.news-cartas h3{
+    font-size: 20px;
+    margin: 10px, 0;
+    font-family: 'Secular One', sans-serif;
+    color: #ff9191;
+}
+.news-cartas a{
+    padding: 10px 0;
+    color: #000000;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+.news-cartas a:hover{
+    text-decoration: underline;
+}
+/* Catrtas banner uno */
+.cartas-banner-uno{
+    width: 100%;
+    height: 350px;
+    background: url('img/largo1.jpg') no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+.cartas-banner-uno .contenido-banner{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #FFFFFF;
+}
+.cartas-banner-uno p,
+.cartas-banner-uno h2{
+    margin: 10px 0 20px 0;
+}
+.contenido-banner{
+    font-family: 'Secular One', sans-serif;
+}
+
+/* Sociales */
+.sociales{
+    margin: 50px;
+}
+.sociales p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Secular One', sans-serif;
+    color: white;
+}
+.enlaces{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enlaces a{
+    margin: 0 20px;
+}
+.enlaces a i{
+    font-size: 3rem;
+}
+
+/* pie enlaces */
+.pie-enlaces{
+    background: #2F3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+.pie-contenedor{
+    display: grid;  /* Que se distribuya como en tabla. */
+    grid-template-columns: repeat(2, 1fr);   /* Vamos, que sean cuatro columnas (el repeat es para no escribir los cuatro '1fr' correspondientes. */
+    gap: 10px;    /* Que haya un espaciado entre las columnas. */
+    align-items: flex-start;
+    justify-content: center;
+}
+.pie-contenedor ul{
+    margin: 0 auto;
+}
+.pie-contenedor ul li{
+    line-height: 2.6;
+}
+.pie{
+    background: #2F3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px, 0;
+    text-align: center;
+    padding-bottom: 20px;    
+}
+
+@media(max-width: 700px){   /* Cuando el tamaño máximo sea de 700px */
+    .menu-boton {
+        display: block;
+    }
+    .nav-principal ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2F3640;
+        height: 100%;
+        padding: 30px;
+        opacity: 0.9;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+    }
+    .nav-principal ul.nav-menu.show{
+        transform: translateX(-20px);
+    }
+    .nav-principal ul.nav-menu li{
+        padding: 20px;
+        font-size: 14px;
+    }
+    .nav-principal ul.nav-menu-derecha{
+        margin-right: 40px;
+    }
+    .news-cartas{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cartas-banner-uno .contenido-banner{
+        width: 80%;
+    }
+    .pie-enlaces .pie-contenedor{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width: 500px){
+    .news-cartas{
+        grid-template-columns: 1fr;
+    }
+    .news-cartas img{
+        height: 270px;
+    }
+    .cartas-banner-uno .contenido-banner{
+        width: 100%;
+        padding: 60px 20px;
+    }
+    .pie-enlaces .pie-contenedor{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fuentes
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Rubik Puddles', cursive;
+    font-family: 'Secular One', sans-serif;
+*/
